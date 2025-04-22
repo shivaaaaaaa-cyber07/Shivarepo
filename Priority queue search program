@@ -1,0 +1,28 @@
+import heapq
+
+# Function to search for an element in a priority queue
+def search_in_priority_queue(pq, target):
+    return target in pq
+
+def main():
+    # Create a priority queue (min-heap)
+    priority_queue = []
+    elements = [10, 5, 30, 20, 40]
+
+    # Insert elements into the priority queue
+    for elem in elements:
+        heapq.heappush(priority_queue, elem)
+
+    print("Priority Queue:", priority_queue)
+
+    # Element to search
+    target = int(input("Enter the element to search: "))
+
+    # Search for the element
+    if search_in_priority_queue(priority_queue, target):
+        print(f"Element {target} found in the priority queue.")
+    else:
+        print(f"Element {target} NOT found in the priority queue.")
+
+if __name__ == "__main__":
+    main()
